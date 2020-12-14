@@ -1,0 +1,272 @@
+@import "normalize.css";
+.home {
+  height: 100vh;
+  width: 100%;
+  background-color: #0d0d0d;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.perspective-text {
+  color: white;
+  font-family: Arial;
+  font-size: 58px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.perspective-line {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.perspective-line p {
+  margin: 0;
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.5s ease-in-out;
+}
+
+.perspective-line:nth-child(odd) {
+  transform: skew(60deg, -30deg) scaleY(0.667);
+}
+
+.perspective-line:nth-child(even) {
+  transform: skew(0deg, -30deg) scaleY(1.337);
+}
+
+.perspective-text:hover p {
+  transform: translate(0, -50px);
+}
+
+.perspective-line:nth-child(1) {
+  left: 29px;
+}
+
+.perspective-line:nth-child(2) {
+  left: 58px;
+}
+
+.perspective-line:nth-child(3) {
+  left: 87px;
+}
+
+.perspective-line:nth-child(4) {
+  left: 116px;
+}
+
+.perspective-line:nth-child(5) {
+  left: 145px;
+}
+.princ {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+}
+.titulo-phone {
+  display: none;
+}
+.titulo-phone2 {
+  display: none;
+}
+.brphone {
+  display: none;
+}
+
+@media (max-width: 540px) {
+  .perspective-text {
+    display: none;
+  }
+  .brphone {
+    display: inline-flex;
+    color: white;
+    font-size: 35px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    letter-spacing: 3px;
+    margin: 0 auto;
+    line-height: 70px;
+  }
+  .iklan {
+    display: none;
+  }
+}
+
+//NAVBAR//
+
+.menu {
+  position: fixed;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  z-index: 50;
+}
+.burger {
+  margin: 20px 20px 0 0;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  float: right;
+}
+.burger div {
+  margin: 5px;
+  width: 25px;
+  height: 3px;
+  background-color: #1abc9c;
+  transition: all 0.3 ease;
+}
+
+.menu-links {
+  opacity: 1;
+  margin-top: 00px;
+  margin-bottom: 30px;
+  position: fixed;
+  right: 0;
+  height: 104vh;
+  width: 13%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in;
+}
+.menu-links li {
+  margin-top: -40px;
+  list-style: none;
+  opacity: 0;
+}
+.menu-links a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #999;
+}
+
+.menu-active {
+  transform: translateX(0%);
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (min-width: 850px) and (max-width: 1350px) {
+  .menu-links {
+    width: 20%;
+  }
+}
+@media (max-width: 850px) and (min-width: 0px) {
+  .menu-links {
+    width: 100%;
+  }
+}
+.entry-title a {
+  cursor: pointer;
+}
+.card {
+  cursor: pointer;
+}
+
+.body-progr {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #e0e0e0;
+  background-color: #0d0d0d;
+}
+
+.container {
+  display: flex;
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  position: relative;
+  max-width: 1150px;
+  margin: 0 40px 0 40px;
+}
+.sidebar {
+  margin-left: -15px;
+
+  margin-right: 0px;
+  height: 100vh;
+  position: fixed;
+  overflow: scroll;
+  z-index: 50;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.sidebar h1 {
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.sidebar h1:hover {
+  color: cyan;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.cuerpo {
+  overflow: hidden;
+  margin-left: 270px;
+  margin-top: 50px;
+  position: absolute;
+  flex-direction: column;
+}
+.cuerpo h1 {
+  letter-spacing: 1.2px;
+  font-size: 17px;
+  color: cyan;
+}
+.cuerpo h2 {
+  color: #9ab3c0;
+  font-size: 16px;
+  margin-left: 15px;
+  margin-top: 8px;
+}
+.cuerpo p {
+  margin-left: 15px;
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+.inicio-btn {
+  text-decoration: none;
+  color: #e0e0e0;
+}
+Express / How to import packages (nested, autoprefixer, normalize, etc) to my project #1
+
+Hi, guys.
+Hope you are all fine.
+I am very new on this programming world. I am understanding and practicing Express. I created my files, I could connect the "gets" and "posts", and also my css is working on ejs.
+I am using ejs on this project, my particular question is: How can I import packages (for example nested, autoprefixer, normalize, etc and then use it on my project).
+I installed on my package.json, but I don't know what to do next. Should I install webpack, and then import them on a webpack.config.js file?
+I'll hope someone can help me, also is my first time publishing an issue in Github :D
+
+Regards,
+Alex.

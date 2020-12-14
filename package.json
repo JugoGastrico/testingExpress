@@ -1,0 +1,24 @@
+{
+  "name": "prubasa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.1.0",
+    "express": "^4.17.1",
+    "import": "0.0.6",
+    "nested": "0.0.1-pre2"
+  },
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "nodemon": "^2.0.6",
+    "normalize.css": "^8.0.1"
+  }
+}
